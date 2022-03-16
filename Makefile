@@ -1,6 +1,6 @@
 # Chart version
-MANAGER_SEM_VERSION   ?= 0.4.0
-DASHBOARD_SEM_VERSION ?= 0.4.0
+MANAGER_SEM_VERSION   ?= 0.4.1
+DASHBOARD_SEM_VERSION ?= 0.4.1
 
 # Container Image version
 MANAGER_APP_VERSION   ?= v0.4.0
