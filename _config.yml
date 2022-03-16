@@ -1,4 +1,1 @@
-include:
-  - README.md
-  # - index.yaml
-  - artifacthub-repo.yml
+include: ["README.md", "artifacthub-repo.yml"]
