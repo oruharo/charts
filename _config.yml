@@ -1,1 +1,1 @@
-exclude: ["README.md", "artifacthub-repo.yml"]
+include: ["README.md", "artifacthub-repo.yml"]
