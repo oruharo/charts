@@ -1,1 +1,4 @@
-include: ["README.md", "artifacthub-repo.yml"]
+exclude:
+  - LICENSE
+  - Makefile
+  - charts
