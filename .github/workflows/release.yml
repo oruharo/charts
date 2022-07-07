@@ -5,14 +5,18 @@ on:
 
 jobs:
   release:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
       - name: Checkout cosmo
         uses: actions/checkout@v3
         with:
-          #repository: cosmo-workspace/cosmo
+          repository: oruharo/cosmo
+          path: cosmo
           fetch-depth: 0
 
       - name: Configure Git
@@ -22,11 +26,11 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v1
         with:
-          version: v3.8.1
+          version: v3.4.1
 
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.2.1
+        uses: helm/chart-releaser-action@v1.3.0
         with:
-          charts_dir: charts
+          charts_dir: cosmo/charts
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
