@@ -4,10 +4,10 @@ entries:
   - annotations:
       artifacthub.io/prerelease: "false"
     apiVersion: v2
-    appVersion: v0.4.1
-    created: "2022-07-07T21:10:20.355476982Z"
+    appVersion: v0.5.0
+    created: "2022-07-07T21:21:01.426922547Z"
     description: COSMO Controller Manager Helm chart for Kubernetes
-    digest: 2579454feb2d5b1cbf7916bc93f63dd92556a19c429f6fb710c833fb3676df12
+    digest: 8f4ea9b111644107a19747433b9477567f9d0df75b9fea8f67af8cd0a2d03176
     home: https://github.com/cosmo-workspace/cosmo
     icon: https://raw.githubusercontent.com/cosmo-workspace/cosmo/main/logo/logo-square-small.png
     keywords:
@@ -28,16 +28,16 @@ entries:
     - https://github.com/cosmo-workspace/charts
     type: application
     urls:
-    - https://github.com/oruharo/charts/releases/download/cosmo-controller-manager-0.4.1/cosmo-controller-manager-0.4.1.tgz
-    version: 0.4.1
+    - https://github.com/oruharo/charts/releases/download/cosmo-controller-manager-0.5.0/cosmo-controller-manager-0.5.0.tgz
+    version: 0.5.0
   cosmo-dashboard:
   - annotations:
       artifacthub.io/prerelease: "false"
     apiVersion: v2
-    appVersion: v0.4.1
-    created: "2022-07-07T21:10:20.540374124Z"
+    appVersion: v0.5.0
+    created: "2022-07-07T21:21:01.577887823Z"
     description: COSMO Dashboard Helm chart for Kubernetes
-    digest: 95f709c2384fe86280e964bb27b3ecaa67745d21de9c2f0cddb50fe1ed64507e
+    digest: cae049ba0081e9dc1e421912b2909a5703761fce92577a7601760d35fdc77883
     home: https://github.com/cosmo-workspace/cosmo
     icon: https://raw.githubusercontent.com/cosmo-workspace/cosmo/main/logo/logo-square-small.png
     keywords:
@@ -58,6 +58,6 @@ entries:
     - https://github.com/cosmo-workspace/charts
     type: application
     urls:
-    - https://github.com/oruharo/charts/releases/download/cosmo-dashboard-0.4.1/cosmo-dashboard-0.4.1.tgz
-    version: 0.4.1
-generated: "2022-07-07T21:10:20.540386826Z"
+    - https://github.com/oruharo/charts/releases/download/cosmo-dashboard-0.5.0/cosmo-dashboard-0.5.0.tgz
+    version: 0.5.0
+generated: "2022-07-07T21:21:01.577900624Z"
