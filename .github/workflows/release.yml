@@ -12,7 +12,7 @@ jobs:
       - name: Checkout cosmo
         uses: actions/checkout@v3
         with:
-          #repository: cosmo-workspace/cosmo
+          repository: cosmo-workspace/cosmo
           fetch-depth: 0
 
       - name: Configure Git
