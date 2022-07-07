@@ -18,7 +18,8 @@ jobs:
           repository: oruharo/cosmo
           path: cosmo
           #fetch-depth: 0
-      
+      - name: xxx
+        run: pwd && ls -l
       - name: rm old
         run: rm -rf charts/charts
         
