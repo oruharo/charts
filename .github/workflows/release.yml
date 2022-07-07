@@ -11,20 +11,21 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          path: charts
 
       - name: Checkout cosmo
         uses: actions/checkout@v3
         with:
           repository: oruharo/cosmo
-          #path: cosmo
+          path: cosmo
           #fetch-depth: 0
       - name: xxx
-        run: pwd && ls -l
+        run: pwd && ls -l ; ls -l charts ; ls  -l cosmo
       - name: rm old
-        run: rm -rf charts/charts
+        run: rm -rf charts/charts/charts
         
       - name: copy charts from cosmo
-        run: cp -pr ../cosmo/charts charts
+        run: cp -pr cosmo/charts charts
 
       - name: xxx
         run: pwd && ls -l
