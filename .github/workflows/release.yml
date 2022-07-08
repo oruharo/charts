@@ -11,7 +11,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          path: charts
 
       - name: Checkout cosmo
         uses: actions/checkout@v3
@@ -22,14 +21,12 @@ jobs:
       - name: xxx
         run: |
           pwd && ls -l ; ls -l charts ; ls  -l cosmo; ls  -l charts/charts
-          rm -rf charts/charts
-          cp -pr cosmo/charts charts/
-          pwd && ls -l ; ls -l charts/charts
-        
+          rm -rf charts
+          mv cosmo/charts .
+          pwd && ls -l ; ls -l charts
         
       - name: Configure Git
         run: |
-          cd charts
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
         
@@ -41,6 +38,6 @@ jobs:
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.0
         with:
-          charts_dir: charts/charts
+          charts_dir: charts
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
