@@ -20,30 +20,27 @@ jobs:
           path: cosmo
           #fetch-depth: 0
       - name: xxx
-        run: pwd && ls -l ; ls -l charts ; ls  -l cosmo; ls  -l charts/charts
-  
-      - name: rm old
-        run: rm -rf charts/charts
-        
-      - name: copy charts from cosmo
-        run: cp -pr cosmo/charts charts/
-        
-      - name: xxx
-        run: pwd && ls -l ; ls -l charts/charts
+        run: |
+          pwd && ls -l ; ls -l charts ; ls  -l cosmo; ls  -l charts/charts
+          rm -rf charts/charts
+          cp -pr cosmo/charts charts/
+          pwd && ls -l ; ls -l charts/charts
         
         
       - name: Configure Git
         run: |
+          cd charts
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+        
       - name: Install Helm
         uses: azure/setup-helm@v1
         with:
           version: v3.4.1
 
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.3.0
+        uses: helm/chart-releaser-action@v1.4.0
         with:
-          charts_dir: cosmo/charts
+          charts_dir: charts/charts
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
