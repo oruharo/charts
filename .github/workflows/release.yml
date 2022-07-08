@@ -20,7 +20,7 @@ jobs:
           #fetch-depth: 0
       - name: xxx
         run: |
-          pwd && ls -l ; ls -l charts ; ls  -l cosmo; ls  -l charts/charts
+          pwd && ls -l ; ls -l charts ; ls  -l cosmo
           rm -rf charts
           mv cosmo/charts .
           pwd && ls -l ; ls -l charts
