@@ -20,15 +20,17 @@ jobs:
           path: cosmo
           #fetch-depth: 0
       - name: xxx
-        run: pwd && ls -l ; ls -l charts ; ls  -l cosmo
+        run: pwd && ls -l ; ls -l charts ; ls  -l cosmo; ls  -l charts/charts
+  
       - name: rm old
-        run: rm -rf charts/charts/charts
+        run: rm -rf charts/charts
         
       - name: copy charts from cosmo
-        run: cp -pr cosmo/charts charts
-
+        run: cp -pr cosmo/charts charts/
+        
       - name: xxx
-        run: pwd && ls -l
+        run: pwd && ls -l ; ls -l charts/charts
+        
         
       - name: Configure Git
         run: |
