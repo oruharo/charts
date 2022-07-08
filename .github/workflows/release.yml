@@ -18,18 +18,17 @@ jobs:
           repository: oruharo/cosmo
           path: cosmo
           #fetch-depth: 0
-      - name: xxx
+      - name: mv cosmo/charts
         run: |
-          pwd && ls -l ; ls -l charts ; ls  -l cosmo
-          rm -rf charts
+          pwd && ls -l
           mv cosmo/charts .
-          pwd && ls -l ; ls -l charts
-        
+          pwd && ls -l
+
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-        
+
       - name: Install Helm
         uses: azure/setup-helm@v1
         with:
